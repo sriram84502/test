@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Conf-Portal API</title>
+  <link rel="stylesheet"
+        href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css"/>
+  <style> html,body,#swagger-ui{height:100%} </style>
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script>
+    window.onload = () => SwaggerUIBundle({
+      url: "openapi.yaml",          // ← loads spec from same folder
+      dom_id: "#swagger-ui",
+      presets: [SwaggerUIBundle.presets.apis],
+    });
+  </script>
+</body>
+</html>
