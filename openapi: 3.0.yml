@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info: {title: demo, version: 0.0.0}
+paths:
+  /api/uploads/{key}:
+    get:
+      tags: [Uploads]
+      summary: Download image
+      parameters:
+        - in: path
+          name: key
+          required: true
+          schema: {type: string}
+      responses:
+        '200': {description: OK}
